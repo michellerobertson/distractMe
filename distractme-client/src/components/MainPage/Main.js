@@ -1,12 +1,14 @@
 import React from 'react';
 
-function Main() {
+const MainPage = ({ fetchFacts }) => {
   return (
     <div>
-      <h1>Main Component</h1>
-      <p>This will be the main page.</p>
+      <h2>Click the button below for some instant distraction:</h2>
+      <button onClick={fetchFacts} className="button-text">
+        distractMe<br /> ;
+        </button>
     </div>
   );
-}
+};
 
-export default Main;
+export default MainPage;
