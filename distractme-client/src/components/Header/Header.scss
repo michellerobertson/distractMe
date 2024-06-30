@@ -1,0 +1,11 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/fonts' as *; 
+@use '../../styles/variables' as *;
+ 
+.header {
+    text-align: center; 
+    font-size: 5rem; 
+    color: $secondary-color-white;
+    margin: 0;
+    padding-top: 24px;
+}

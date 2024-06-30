@@ -5,7 +5,7 @@ import Header from './components/Header/Header'
 import MainPage from './components/MainPage/MainPage';
 import FactsPage from './components/FactsPage/FactsPage';
 import AboutPage from './components/AboutPage/AboutPage';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [fact, setFact] = useState(null); // State to store fetched fact

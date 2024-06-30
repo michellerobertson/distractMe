@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './FactsPage.scss'; 
 
 function FactsPage({ fact, fetchFacts }) {
-  // console.log('Fact received test:', fact); // Test log
-  console.log('Type of fact:', typeof fact);
-  console.log('Fact object:', fact);
-
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -19,14 +16,16 @@ function FactsPage({ fact, fetchFacts }) {
   };
 
   return (
-    <div>
-      {/* <h1>Facts Page</h1> */}
-      {fact && fact.length > 0 && (
-        <div>
-          <p>{fact[0].fact}</p>
-          <button onClick={handleFetchNewFact} className="button-text">distractMe<br /> ;</button>
+    <div className="facts-page-container">
+      <div className="content">
+        <p className="content__text">{fact && fact.length > 0 && fact[0].fact}</p>
+        <div className="content__button">
+          <button onClick={handleFetchNewFact} className="content__button-text">
+            distractMe<br />
+            <span className="content__button-text--semicolon">;</span>
+          </button>
         </div>
-      )}
+      </div>
     </div>
   );
 }

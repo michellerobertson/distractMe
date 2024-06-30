@@ -1,0 +1,39 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/fonts' as *; 
+@use '../../styles/variables' as *;
+
+
+footer {
+  padding-top: 4em;
+
+    nav {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+    }
+  
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none; 
+      display: flex;
+      flex-direction: column;
+
+  
+      li {
+        margin: 5px; 
+      }
+  
+      a {
+        color: $secondary-color-white; 
+        text-decoration: none; 
+        font-size: 1.2rem; 
+        transition: color 0.3s ease; 
+        margin: 0; 
+  
+        &:hover {
+          color: lighten($secondary-color-white, 20%); 
+        }
+      }
+    }
+  }

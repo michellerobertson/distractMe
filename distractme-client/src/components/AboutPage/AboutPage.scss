@@ -1,0 +1,45 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/fonts' as *; 
+@use '../../styles/variables' as *;
+
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $primary-color-navy; 
+    padding-top: 20px;
+  
+    section {
+      max-width: 600px; 
+    }
+  
+    h2 {
+        margin-top: 0;
+      margin-bottom: 10px; 
+    }
+  
+    p {
+        margin-top: 0;
+      margin-bottom: 10px; 
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 0;
+   
+    }
+  
+    a {
+      color: $primary-color-navy; 
+      text-decoration: underline; 
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: lighten($primary-color-navy, 20%); 
+      }
+    }
+  }
