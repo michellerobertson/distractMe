@@ -5,7 +5,7 @@
 body {
   margin: 0; 
   padding: 0; 
-  font-family: 'Dancing Script', cursive; 
+  font-family: $font-family-dancing-script;
   background: radial-gradient(
     ellipse at center,
     turquoise,

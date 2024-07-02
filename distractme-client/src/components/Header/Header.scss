@@ -4,8 +4,25 @@
  
 .header {
     text-align: center; 
-    font-size: 5rem; 
-    color: $secondary-color-white;
+    font-size: 4rem;
     margin: 0;
-    padding-top: 24px;
+    padding: 1.5rem 1rem 0 1rem;
+
+    @include tablet {
+        font-size: 5rem; 
+    }
+
+    @include small-screen {
+        font-size: 3rem;
+      }
 }
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: $secondary-color-white;
+
+    &:hover {
+        color: lighten($secondary-color-white, 20%); 
+      }
+  }

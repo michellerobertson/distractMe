@@ -13,7 +13,7 @@ const MainPage = ({ fetchFacts }) => {
   return (
     <div className="main-page-container">
       <div className="content">
-        <h2 className="content__text">Click the button below for some instant distraction:</h2>
+        <p className="content__text">Click the button below for some instant distraction:</p>
         <div className="content__button">
           <button onClick={handleClick} className="content__button-text">
             distractMe<br />

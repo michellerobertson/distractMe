@@ -3,43 +3,46 @@
 @use '../../styles/variables' as *;
 
 
-.about-page {
+.about-page-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: $primary-color-navy; 
-    padding-top: 20px;
+    padding: 1.25rem 2rem 0;
   
-    section {
-      max-width: 600px; 
+    @include tablet {
+      padding-inline: 10rem;
     }
   
     h2 {
-        margin-top: 0;
-      margin-bottom: 10px; 
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0; 
     }
   
     p {
-        margin-top: 0;
-      margin-bottom: 10px; 
+      font-family: $font-family-lora;
+      margin-top: 0;
+      margin-bottom: .625rem; 
     }
   
     ul {
       list-style-type: none;
+      font-family: $font-family-lora;
+      text-align: center;
       padding: 0;
       margin-top: 0;
-   
+      font-weight: 600;
     }
   
     a {
       color: $primary-color-navy; 
-      text-decoration: underline; 
+      text-decoration: none; 
       transition: color 0.3s ease;
   
       &:hover {
-        color: lighten($primary-color-navy, 20%); 
+        color: $secondary-color-white; 
       }
     }
   }

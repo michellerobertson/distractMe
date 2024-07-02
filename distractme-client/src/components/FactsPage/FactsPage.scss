@@ -12,6 +12,7 @@
 
 .content {
   text-align: center; 
+  font-family: $font-family-lora;
 
   &__text {
     color: $primary-color-navy;
@@ -27,11 +28,10 @@
 
     &-text {
       font-size: 1rem; 
-      font-family: 'Dancing Script', cursive;
-      padding: 20px 15px; 
+      padding: 1.25rem .9375rem; 
       color: $primary-color-navy;
       background-color: #c8a2c8; 
-      border: 2px solid $secondary-color-white;
+      border: .125rem solid $secondary-color-white;
       border-radius: 50%; 
       cursor: pointer;
       display: flex;
@@ -42,7 +42,7 @@
 
       &--semicolon {
         font-size: 2.2rem; 
-        margin-top: -10px;
+        margin-top: -0.625rem;
       }
 
       &:hover {
