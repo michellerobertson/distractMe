@@ -26,7 +26,7 @@ const AboutPage = () => {
             viewing the content.<br />
             Please note that this app is not a replacement for professional medical advice or
             treatment. For medical advice or treatment, please consult your healthcare provider.<br />
-            If you need immediate assistance, you can contact the following hotlines:</p>
+            *** If you need immediate assistance, you can contact the following hotlines:</p>
           <ul>
             <li>
               <a href="https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-get-help.html" target="_blank" rel="noopener noreferrer">

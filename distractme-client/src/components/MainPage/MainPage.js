@@ -1,19 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MainPage.scss'; 
 
-const MainPage = ({ fetchFacts }) => {
+const MainPage = ({ fetchFacts, fetchJokes }) => {
+  const [distractionType, setDistractionType] = useState('fact');
   const navigate = useNavigate();
 
+  const handleDistractionTypeChange = (event) => {
+    setDistractionType(event.target.value);
+  };
+
   const handleClick = async () => {
-    await fetchFacts();
-    navigate('/facts');
+    try {
+      if (distractionType === 'fact') {
+        await fetchFacts();
+        navigate('/facts');
+      } else if (distractionType === 'joke') {
+        await fetchJokes();
+        navigate('/jokes');
+      }
+    } catch (error) {
+      console.error('Error fetching distraction:', error);
+    }
   };
 
   return (
     <div className="main-page-container">
       <div className="content">
-        <p className="content__text">Click the button below for some instant distraction:</p>
+        <p className="content__text">Choose your distraction:</p>
+        <div className="content__radio">
+          <label>
+            <input
+              type="radio"
+              name="distractionType"
+              value="fact"
+              checked={distractionType === 'fact'}
+              onChange={handleDistractionTypeChange}
+            />
+            Fact
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="distractionType"
+              value="joke"
+              checked={distractionType === 'joke'}
+              onChange={handleDistractionTypeChange}
+            />
+            Humour
+          </label>
+        </div>
         <div className="content__button">
           <button onClick={handleClick} className="content__button-text">
             distractMe<br />
@@ -24,4 +60,5 @@ const MainPage = ({ fetchFacts }) => {
     </div>
   );
 };
+
 export default MainPage;

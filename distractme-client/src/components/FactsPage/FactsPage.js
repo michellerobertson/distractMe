@@ -18,7 +18,7 @@ function FactsPage({ fact, fetchFacts }) {
   return (
     <div className="facts-page-container">
       <div className="content">
-        <p className="content__text">{fact && fact.length > 0 && fact[0].fact}</p>
+        <p className="content__text">{fact && fact.length > 0 ? fact[0].fact : 'Loading fact...' }</p>
         <div className="content__button">
           <button onClick={handleFetchNewFact} className="content__button-text">
             distractMe<br />

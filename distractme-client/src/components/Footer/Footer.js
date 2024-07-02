@@ -19,6 +19,13 @@ function Footer() {
           <li><Link to="/about">About</Link></li>
         </ul>
       );
+    } else if (location.pathname === '/jokes') {
+      return (
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+        </ul>
+      );
     } else if (location.pathname === '/about') {
       return (
         <ul>

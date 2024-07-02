@@ -6,41 +6,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 61vh; 
+  height: 61vh;
   width: 100vw;
 }
 
 .content {
-  text-align: center; 
+  text-align: center;
+  padding-bottom: 3.75rem;
 
   &__text {
     color: $primary-color-navy;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     margin-top: 0;
   }
 
   &__button {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 
     &-text {
-      font-size: 1rem; 
+      font-size: 1rem;
       font-family: 'Dancing Script', cursive;
-      padding: 1.25rem .9375rem; 
+      padding: 1.25rem .9375rem;
       color: $primary-color-navy;
-      background-color: #c8a2c8; 
+      background-color: #c8a2c8;
       border: .125rem solid $secondary-color-white;
-      border-radius: 50%; 
+      border-radius: 50%;
       cursor: pointer;
       display: flex;
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      text-align: center; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
       &--semicolon {
-        font-size: 2.2rem; 
+        font-size: 2.2rem;
         margin-top: -0.625rem;
       }
 
@@ -49,6 +50,65 @@
       }
     }
   }
+
+  &__radio {
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: justify;
+
+    input[type="radio"] {
+      appearance: none; 
+      width: 1.25rem; 
+      height: 1.25rem; 
+      border: .125rem solid $secondary-color-white; 
+      border-radius: 50%; 
+      cursor: pointer; 
+      position: relative; 
+      vertical-align: middle; 
+      margin-right: .625rem; 
+
+      &::before {
+        content: '';
+        display: block;
+        width: 1.0625rem; 
+        height: 1.0625rem; 
+        background-color: $primary-color-lilac; 
+        border-radius: 50%;
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+
+      &:checked::before {
+        opacity: 1; 
+        background-color: $primary-color-lilac; 
+      }
+
+      &:hover::before {
+        opacity: 1; 
+        background-color: $secondary-color-dark-lilac; 
+      }
+    }
+
+    label {
+      color: $primary-color-navy;
+      font-size: 1.125rem;
+      display: inline-flex; 
+      align-items: center; 
+      cursor: pointer; 
+    }
+
+    input[type="radio"]:checked::after {
+      content: '\2714'; 
+      font-size: 2.1875rem; 
+      color: $secondary-color-white; 
+      position: absolute; 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+    }
+  }
 }
-
-
