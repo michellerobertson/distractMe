@@ -6,11 +6,10 @@ function JokesPage({ joke, fetchJokes }) {
     const navigate = useNavigate();
   
     useEffect(() => {
-      console.log('JokesPage mounted, joke:', joke);
-      if (!joke) {
-        fetchJokes();
+      if (!joke || joke.length === 0) {
+        navigate('/');
       }
-    }, [joke, fetchJokes]);
+    }, [joke, navigate]);
   
     const handleFetchNewJoke = async () => {
       await fetchJokes();

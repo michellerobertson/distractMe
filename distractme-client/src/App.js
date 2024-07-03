@@ -8,7 +8,6 @@ import JokesPage from './components/JokesPage/JokesPage';
 import AboutPage from './components/AboutPage/AboutPage';
 import Footer from './components/Footer/Footer'
 
-
 function App() {
   const [fact, setFact] = useState(null); // State to store fetched fact
   const [joke, setJoke] = useState(null); // State to store fetched joke
