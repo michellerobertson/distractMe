@@ -6,11 +6,18 @@ body {
   margin: 0; 
   padding: 0; 
   font-family: $font-family-dancing-script;
+  height: 100vh; 
+  
+  
+}
+
+.app-container {
   background: radial-gradient(
     ellipse at center,
     turquoise,
     navy  
   );
-  height: 100vh; 
+  min-height: 100vh; 
+
 }
 

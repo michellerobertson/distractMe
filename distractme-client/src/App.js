@@ -44,7 +44,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="app-container">
         <Header />
         <Routes>
           <Route path="/" element={<MainPage fetchFacts={fetchFacts} fetchJokes={fetchJokes} />} />
