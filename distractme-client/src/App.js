@@ -14,11 +14,7 @@ function App() {
 
   const fetchFacts = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/facts`, {
-        headers: {
-          'X-Api-Key': process.env.REACT_APP_API_KEY
-        }
-      });
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/facts`);
       const data = await response.json();
       setFact(data); // Update state with fetched data
     } catch (error) {
@@ -28,11 +24,7 @@ function App() {
 
   const fetchJokes = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/jokes`, {
-        headers: {
-          'X-Api-Key': process.env.REACT_APP_API_KEY
-        }
-      });
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/jokes`);
       const data = await response.json();
       setJoke(data); // Update state with fetched data
     } catch (error) {
