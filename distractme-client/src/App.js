@@ -20,9 +20,7 @@ function App() {
         }
       });
       const data = await response.json();
-      console.log('Testing Fetched fact:', data); 
       setFact(data); // Update state with fetched data
-      console.log('Testing Fetched fact state:', data); 
     } catch (error) {
       console.error('Error fetching facts:', error);
     }
@@ -36,7 +34,7 @@ function App() {
         }
       });
       const data = await response.json();
-      setJoke(data);
+      setJoke(data); // Update state with fetched data
     } catch (error) {
       console.error('Error fetching jokes:', error);
     }
