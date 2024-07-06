@@ -18,7 +18,7 @@ app.get('/api/facts', async (req, res) => {
   try {
       const response = await axios.get('https://api.api-ninjas.com/v1/facts', {
           headers: {
-              'X-Api-Key': process.env.API_KEY
+              'X-Api-Key': API_KEY
           }
       });
       const facts = response.data;
@@ -34,7 +34,7 @@ app.get('/api/jokes', async (req, res) => {
   try {
     const response = await axios.get('https://api.api-ninjas.com/v1/jokes', {
       headers: {
-        'X-Api-Key': process.env.API_KEY
+        'X-Api-Key': API_KEY
       }
     });
     const jokes = response.data;
