@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './MainPage.scss'; 
 
 const MainPage = ({ fetchFacts, fetchJokes }) => {
-  const [distractionType, setDistractionType] = useState('fact');
+  const [distractionType, setDistractionType] = useState('');
   const navigate = useNavigate();
 
   const handleDistractionTypeChange = (event) => {
